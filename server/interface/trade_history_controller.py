@@ -16,5 +16,5 @@ trade_data_service: TradeDataService = H5FileReader()
     summary="Get trade log of XRP to USDT by timestamp",
     response_model=List[TradeData]
 )
-def get_xrp_to_usd_tether_price(start_time: int = 1582509911141, end_time: int = 1582519911141):
+def get_xrp_to_usd_tether_price(start_time: int = 1582509911141, end_time: int = 1582509991141):
     return trade_data_service.get_xrp_to_usdt(start_time, end_time).to_dict("r")
